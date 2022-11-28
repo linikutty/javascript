@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <Link rel="stylesheet" href="app.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+</head>
+<body>
+    <!-- nav start here-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+          <a class=" navbar-brand" href="app.html"><img class="name" src="https://brandslogos.com/wp-content/uploads/thumbs/kfc-kentucky-fried-chicken-logo-vector.svg"/></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="nav_li collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="app.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="menu.html">Menu</a>
+              </li>
+              
+            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="register.html">SignUp</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">Login</a>
+                </li>
+                
+              </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <!-- nav end here-->
+
+
+   
+
+        <div class="container" id="displays">
+	
+                
+        </div>
+        
+        
+            
+    </div>
+</div>
+    
+    <script>
+      let mail=JSON.parse(sessionStorage.getItem("pro_mail"));
+
+      console.log(mail);
+      
+      let pass=JSON.parse(sessionStorage.getItem("pro_pass"));
+
+      console.log(pass);
+      //console.log(profile);
+       
+      // let profile_list=" ";
+
+      // profile.map((list,ind) => {
+      //   // profile.filter((v)=>{return v.profile==list}){
+      //   //console.log(list,ind)
+      //   profile_list+=`<div class="row login_box">
+	    // <div class="col-md-12 col-xs-12" align="center">
+            
+              
+      //       <h1>Hi ${list.name}</h1>
+            
+            
+	    // </div>
+        
+      //   <div class="col-md-12 col-xs-12 login_control">
+      //             <div class="control">
+      //               <div class="label">Name</div>
+      //               <input type="text" class="form-control" value="${list.name}" id="pr_name"/>
+      //           </div>
+                  
+      //           <div class="control">
+      //               <div class="label">Email Address</div>
+      //               <input type="email" class="form-control" value="${list.email} " id="pr_email"/>
+      //           </div>
+                
+      //           <div class="control">
+      //                <div class="label">Password</div>
+      //               <input type="password" class="form-control" value="${list.passwd}" id="pr_passwd"/>
+      //           </div>
+      //           <div align="center">
+      //                <button class="btn btn-orange">EDIT</button>
+                 
+      //           </div>`;
+        
+      // });
+
+
+      let profile_list=new Array();
+
+      user_prfl=" ";
+
+      profile_list=JSON.parse(localStorage.getItem("register_details"));
+      console.log(profile_list);
+      if(profile_list.some((v)=>{return v.email==mail && v.pass==pass}))
+      {
+        let current_user=profile_list.filter((v)=>{return v.name==name && v.email== mail && v.pass==pass})
+        user_prfl+=`<div class="row login_box">
+	    <div class="col-md-12 col-xs-12" align="center">
+            
+              
+            <h1>Hi ${v.name}</h1>
+            
+            
+	    </div>
+        
+        <div class="col-md-12 col-xs-12 login_control">
+                  <div class="control">
+                    <div class="label">Name</div>
+                    <input type="text" class="form-control" value="${v.name}" id="pr_name"/>
+                </div>
+                  
+                <div class="control">
+                    <div class="label">Email Address</div>
+                    <input type="email" class="form-control" value="${v.email} " id="pr_email"/>
+                </div>
+                
+                <div class="control">
+                     <div class="label">Password</div>
+                    <input type="password" class="form-control" value="${v.pass}" id="pr_passwd"/>
+                </div>
+                <div align="center">
+                     <button class="btn btn-orange">EDIT</button>
+                 
+                </div>`;
+      }
+
+
+
+
+
+      displays.innerHTML= user_prfl;
+    </script>
+</body>
+</html>

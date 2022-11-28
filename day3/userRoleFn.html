@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Role Function</title>
+</head>
+<body>
+    <script>
+        var getUserRole=function(name,role){
+            switch(role){
+                case "admin":
+                    return`${name} is admin with all access`;
+                break;
+                case "subadmin":
+                    return`${name} is subadmin with access to create and delete courses`;
+                break;
+                case "testprep":
+                    return`${name} is a testprep with access to create and delete test`;
+                break;
+                case "user":
+                    return`${name} is a trial user`;
+                break;
+
+
+            }
+
+        };
+
+        console.log(getUserRole("shalini","subadmin"));
+    </script>
+</body>
+</html>

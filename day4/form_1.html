@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form_1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid px-1 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                <h3>REGISTRATION</h3>
+               
+                <div class="card">
+                    <h5 class="text-center mb-4">FORM</h5>
+                    <form class="form-card" onsubmit="event.preventDefault()">
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> 
+                                <label class="form-control-label px-3">First name<span class="text-danger"> *</span></label> 
+                                <input type="text" id="fname" name="fname" placeholder="Enter your first name" onblur="validate(1)" required/> 
+                                
+                                <input type="hidden" id="saveIndex1" class="abc"/>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> 
+                                <label class="form-control-label px-3">Last name<span class="text-danger"> *</span></label> 
+                                <input type="text" id="lname" name="lname" placeholder="Enter your last name" onblur="validate(2)" required/> 
+                                
+                                <input type="hidden" id="saveIndex2" class="abc" />
+                            </div>
+                        </div></br>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> 
+                                <label class="form-control-label px-3">Email<span class="text-danger"> *</span></label> 
+                                <input type="text" id="email" name="email" placeholder="" onblur="validate(3)" required/>
+                                
+                                <input type="hidden" id="saveIndex3" class="abc"/>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                 <label class="form-control-label px-3">Phone number<span class="text-danger"> *</span></label> 
+                                 <input type="text" id="mob" name="mob" placeholder="" onblur="validate(4)" required/> 
+                                 
+                                 <input type="hidden" id="saveIndex4" class="abc"/>
+                                </div>
+                        </div></br>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> 
+                                <label class="form-control-label px-3">Job title<span class="text-danger"> *</span></label> 
+                                <input type="text" id="job" name="job" placeholder="" onblur="validate(5)" required/> 
+                                
+                                <input type="hidden" id="saveIndex" class="abc"/>
+                            </div>
+                        
+                            <div class="form-group col-sm-6 flex-column d-flex"> 
+                                <label class="form-control-label px-3">Qualification<span class="text-danger"> *</span></label> 
+                                <input type="text" id="qualif" name="quali" placeholder="" onblur="validate(6)" required/> 
+                                
+                                <input type="hidden" id="saveIndex" class="abc"/>
+                            </div>
+                        </div></br>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-12 flex-column d-flex"> 
+                                <label class="form-control-label px-3">Address<span class="text-danger"> *</span></label> 
+                                <input type="address" id="add" name="add" placeholder="" onblur="validate(7)" required/>
+                               
+                                <input type="hidden" id="saveIndex6" class="abc"/>
+                            </div>
+                        </div></br></br>
+                        <div class="row justify-content-end">
+                            <div class="form-group col-sm-6"> 
+                                <button type="submit" class="btn-block btn-primary mb-5"id="submit">Submit</button> 
+                            </div>
+                        </div>
+                        <button class="butn btn-success p-2 lg:px-4 md:mx-2 text-center border border-solid border-indigo-600 rounded bg-indigo-600 text-white transition-colors duration-300 mt-1 md:mt-0 md:ml-1" style="display: none" id="save-todo-btn">Edit Todo</button>
+                    </form>
+                </div>
+                    <div id="display_form">
+                        <table class="table table-success table-striped">
+
+                            <thead>
+                              <tr>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Mobile</th>
+                                <th scope="col">Job</th>
+                                <th scope="col">Qualification</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Edit</th>
+                                <th>Delete</th>
+                            
+                              </tr>
+                            </thead>
+                            <tbody id="displays"></tbody>
+                        </table>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="form_1.js"></script>
+</body>
+</html>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

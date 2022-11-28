@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 1
+
+    function greaterNum(a,b){
+        if(a>b){
+            console.log("The greater number of "+a+" and "+b+ " is "+a);
+        }
+        else {
+            console.log("The greater number of "+a+" and "+b+ " is "+b);
+        }
+    }
+    greaterNum(10,4);
+    greaterNum(4,5);
+
+    // 2
+
+    function helloWorld(lg){
+        if( lg=='es'){
+            console.log("Welcome to English");
+
+        }
+        else if(lg=='sp'){
+            console.log("Welcome to Spanish");
+        }
+        else if(lg=='tm'){
+            console.log("welcome to Tamil");
+
+        }
+        else{
+            console.log("Hellow World!");
+        }
+    }
+    helloWorld('tm');
+    helloWorld('fg');
+
+
+    // 3
+
+    function  assignGrade(grade){
+            if(grade>=90 && grade<=100){
+                console.log("Grade A");
+            }
+            else if(grade>=80 && grade<90){
+                console.log("Grade B");
+            }
+            else if(grade>=60 && grade<80){
+                console.log("Grade c");
+            }
+            else if(grade>=40 && grade<60){
+                console.log("Grade D");
+            }
+            else{
+                console.log("Fail");
+            }
+
+    }
+    assignGrade(100);
+    assignGrade(70);
+    assignGrade(30);
+
+    // 4
+
+    function pluralize(number,noun){
+        if(number==1){
+            console.log(+number+" "+noun);
+        }
+        else{
+            console.log(+number+" "+noun+"s");
+        }
+    }
+
+    pluralize(5,'cat');
+    pluralize(1,'dog');
+
+    // 5
+
+    function printNumbers(){
+        for(let i=1;i<=10;i++){
+            console.log(i);
+        }
+    }
+    printNumbers();
+
+    // 6
+    
+    let array=[[1,2],[3, 4], [5, 6], [7,8], [9,10]];
+    function printArray(array){
+        for(let i=0;i<array.length;i++){
+            for (let j=0;j<array[0].length;j++){
+                console.log(array[i][j]);
+                
+            }
+        }
+    }
+    printArray(array);
+
+
+    //  7
+    
+    // let arr=[[8,8],[3,33],[4,5],[6,10]];
+    // function printEven(arr){
+    //     for(let i=0;i<arr.length;i++){
+    //         for(let j=0;j<arr.length;j++){
+    //             if(arr[i][i]%2==0){
+    //                 console.log(arr[i][j]);
+    //             }
+    //         }
+    //     }
+    // }
+    // printEven(arr);
+
+
+    // 8
+
+    let list=[1,2,3,10,40,80,50,100];
+    
+    let largestNum= array[0];
+
+    for (let i=1; i<list.length; i++){
+        largestNum= list[i]>largestNum? array[i]:largestNum;
+            largestNum = list[i];
+        }
+    
+    console.log(largestNum);
+
+        //functions
+  
+    const number=[34,54,64,2,4];
+        //sort()
+        let a=number.sort();
+        document.write("sort function : ",a+ `<br><br>`);
+
+        //find()
+        let b=number.find((value)=>{
+            return value>50;
+        });
+        document.write("find function : ",b+ `<br><br>`);
+
+        //filter
+        let c=number.filter((value)=>{
+            return value>50;
+        });
+        document.write("filter function : ",c+ `<br><br>`);
+
+        //map
+        //eg 1
+        let d=number.map((value)=>{
+            return value>50;
+        });
+        document.write("map function : ",d+ `<br><br>`);
+
+        //eg-2
+
+        let e=number.map((value)=>{
+            return "$"+value;
+        });
+        document.write("map function : ",e+ `<br><br>`);
+
+        //eg-3
+        
+        let g=number.map((acc,value)=>{
+            return acc+value;
+        });
+        document.write("map function : ",g+ `<br><br>`);
+
+        //reduce
+        let f=number.reduce((acc,value)=>{
+            return acc*value;
+        });
+        document.write("reduce function : " ,f+ `<br><br>`);
+        //console.log("reduce function : ",f);
+
+        //for in
+
+        const person=
+         {
+            name:'shalu',
+            age:23,
+            place:'Seynamvilai',
+        };
+       
+    
+        for(let key in person){
+            document.write(key+" : ",person[key],".<br>   ");
+        }
+
+        //for in using array
+
+        let color=['red','blue','green','yellow'];
+        for(let key in color){
+            //document.write(key);
+            document.write(color[key],'<br>');
+        }
+
+        //for of
+
+        let items=['cake','biscuit','juice'];
+        for(let key of items){
+            document.write("item:",items);
+        }
+
+</script>
+</html>
+
+

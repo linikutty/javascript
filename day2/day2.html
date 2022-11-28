@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2</title>
+</head>
+<body>
+    <script>
+
+        //push
+
+        const number=[1,2,3,4,5,6];
+        number.push(7,8);
+        console.log(`push number is 7 and 8 :${number}`);
+
+        //pop
+
+        number.pop();
+        console.log(`pop:${number}`);
+
+        //unshift
+
+        number.unshift(0,11,12,13);
+        console.log("unshift",number);
+
+         //shift
+
+         number.shift();
+        console.log("shift",number);
+
+         //splice  delete
+
+         number.splice(1,2);
+        console.log("splice",number);
+
+        //combining array
+
+        //concat()
+
+        const item=['cake','biscuit','juice'];
+        const list=['sweet','icecream'];
+        let things=item.concat(list);
+        console.log(things);
+         let thing=things.slice(1,4);
+         console.log(thing);
+
+         //spread operator
+
+         let items=[...item,...list];
+         console.log(items);
+
+
+         
+
+
+
+
+
+    </script>
+</body>
+</html>

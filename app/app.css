@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* nav start here */
+.name{
+   width: 100px !important;
+
+}
+.nav_li{
+    font-size: 25px!important;
+    /* font-family: "Trirong", serif; */
+    /* font-family: "Sofia", sans-serif;
+  font-size: 30px; */
+  font-family: 'Acme';font-size: 22px;
+
+}
+
+.welcome{
+    font-family: "National 2 Condensed";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 58px;
+    text-transform: uppercase;
+    color: #202124;
+    margin-top: 29.71px;
+    margin-bottom: 30px;
+}

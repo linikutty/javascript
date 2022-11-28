@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding: 0;
+
+}
+body{
+     background-image: url("https://mdbootstrap.com/img/new/fluid/city/018.jpg")!important;
+}
+.todo{
+
+    background-color:darkcyan;
+    margin-top: 100px;
+
+}
+.todo_head{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* font-family: "Sofia", sans-serif;
+    font-family: 'Poppins';font */
+    font-family: 'Bungee Spice';
+    font-size:40px ;
+    font-style: italic;
+}
+.para{
+    font-family: "Sofia";
+}
+.buttons{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.butn{
+    margin: 10px 2px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-align: center;
+}
