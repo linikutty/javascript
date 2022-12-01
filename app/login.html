@@ -123,9 +123,11 @@
               if(user_records.some((v)=>{return v.email==email && v.passwd==pass}))
               {
                 let current_user=user_records.filter((v)=>{return v.email==mail && v.passwd==pass})[0];
-                 console.log(current_user);
+                 console.log("huh",current_user);
+                 console.log("jbjh");
                  sessionStorage.setItem("pro_mail",JSON.stringify(email));
                  sessionStorage.setItem("pro_pass",JSON.stringify(pass));
+                // sessionStorage.setItem("ind",JSON.stringify(current_user[ind]));
                 // let names=user_records.filter((val)=>{return val.name});
                 //  console.log(names)
 

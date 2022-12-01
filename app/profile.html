@@ -81,7 +81,7 @@
 	    // <div class="col-md-12 col-xs-12" align="center">
             
               
-      //       <h1>Hi ${list.name}</h1>
+      //        <h1>Hi ${list.name}</h1>
             
             
 	    // </div>
@@ -114,10 +114,11 @@
       user_prfl=" ";
 
       profile_list=JSON.parse(localStorage.getItem("register_details"));
-      console.log(profile_list);
+      //console.log(profile_list);
       if(profile_list.some((v)=>{return v.email==mail && v.pass==pass}))
       {
-        let current_user=profile_list.filter((v)=>{return v.name==name && v.email== mail && v.pass==pass})
+        let current_user=profile_list.filter((v)=>{return v.email== mail && v.pass==pass})
+        console.log(current_user);
         user_prfl+=`<div class="row login_box">
 	    <div class="col-md-12 col-xs-12" align="center">
             
